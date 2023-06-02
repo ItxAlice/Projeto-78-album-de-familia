@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade JavaScript</title>
+</head>
+<body>
+    <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" style="width: 30%;" id="familyMember">
+    <h4 id="familyMemberName"></h4>
+    <button onclick="update();">Próximo</button>
+
+    <script>
+        var images=["https://i.postimg.cc/MKdhy06Z/family.jpg", "https://i.postimg.cc/L6HcYQM0/grand-father.png", "https://i.postimg.cc/wjMnFtMX/father.jpg", "https://i.postimg.cc/5ymDKL83/bro.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg"];
+        
+        var names=["Álbum de Família", "Rodrigo Silva", "Diego Silva", "Roberto Silva", "Aline Silva", "Sonia Silva"];
+
+        var i = 0;
+        function update()
+        {
+            i++;
+            var numbersOfFamilyMemberInArray = 5
+            if(i > numbersOfFamilyMemberInArray)
+            {
+                i = 0;
+            }
+            var updatedImage= images[i];
+            var updatedName= names[i];
+            document.getElementById("familyMemberImage").src = updatedImage
+            document.getElementById("familyMemberName").innerHTML = updatedName;
+        }
+    </script>
+
+</body>
